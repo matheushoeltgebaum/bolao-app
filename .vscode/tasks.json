@@ -1,0 +1,45 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "replace-env-dev",
+            "type": "shell",
+            "command": "./scripts/replace-env.bat",
+            "args": ["dev"]
+        },
+        {
+            "label": "prepare-env-prod",
+            "type": "shell",
+            "command": "sh ./scripts/replace-env.sh",
+            "args": ["prod"]
+        },
+        {
+            "label": "build-dev-apk",
+            "command": "flutter",
+            "args": ["build", "apk"],
+            "type": "shell"
+        },
+        {
+            "label": "build-prod-apk",
+            "command": "flutter",
+            "args": ["build", "apk", "--release"],
+            "type": "shell"
+        },
+        {
+            "label": "Build APK debug",
+            "dependsOrder": "sequence",
+            "dependsOn": ["replace-dev-env", "build-dev-apk", "open-apk-path"]
+        },
+        {
+            "label": "Build APK prod",
+            "dependsOrder": "sequence",
+            "dependsOn": ["prepare-env-prod", "build-prod-apk", "open-apk-path"]
+        },
+        {
+            "label": "open-apk-path",
+            "command": "open",
+            "args": ["build/app/outputs/flutter-apk/"],
+            "type": "shell"
+        }
+    ]
+}

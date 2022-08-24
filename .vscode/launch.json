@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "bolao_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "bolao_app (DEV)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug",
+            "preLaunchTask": "replace-env-dev",
+        },
+        {
+            "name": "bolao_app (PROFILE)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "preLaunchTask": "replace-env-dev",
+        },
+        {
+            "name": "bolao_app (PROD)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "preLaunchTask": "prepare-env-prod",
+        }
+    ]
+}
