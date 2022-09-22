@@ -1,5 +1,5 @@
-import 'package:bolao_app/src/features/login/data/auth_repository.dart';
 import 'package:bolao_app/src/features/login/presentation/sign_in_screen.dart';
+import 'package:bolao_app/src/features/login/shared/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

@@ -1,4 +1,5 @@
 import 'package:bolao_app/src/features/login/data/auth_repository.dart';
+import 'package:bolao_app/src/features/login/shared/providers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class AccountScreenController extends StateNotifier<AsyncValue<void>> {
