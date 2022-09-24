@@ -45,7 +45,7 @@ class GoogleAuthRepository implements AuthRepository {
       await _auth.signInWithCredential(credential);
     } catch (error) {
       print(error);
-      throw 'Could not sign in with Google';
+      throw 'Não foi possível fazer login com o Google';
     }
   }
 
